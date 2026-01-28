@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DelightClothing – Fashion for Everyone</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;}
+body{background:#e8f5e9;color:#333;line-height:1.6;}
+
+header{
+  background:#2e7d32;
+  color:#fff;
+  padding:30px 20px;
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index:1000;
+  box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
+header h1{margin:0;font-size:32px;}
+nav{margin-top:10px;}
+nav a{
+  color:#fff;
+  margin-right:20px;
+  text-decoration:none;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.container{max-width:1200px;margin:auto;padding:180px 20px 60px;}
+
+section{margin-bottom:80px;}
+h2{color:#1b5e20;margin-bottom:20px;font-size:28px;}
+
+.hero{
+  background:url('https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+  color:white;
+  padding:120px 30px;
+  border-radius:10px;
+  text-align:center;
+}
+.hero h2{font-size:40px;color:white;}
+.hero p{max-width:700px;margin:20px auto;}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+.card{
+  background:#fff;
+  padding:15px;
+  border-radius:8px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+  text-align:center;
+}
+.card img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  border-radius:6px;
+}
+.price{color:#2e7d32;font-weight:bold;margin:10px 0;}
+.btn{
+  background:#2e7d32;
+  color:#fff;
+  padding:8px 12px;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  margin-top:5px;
+}
+
+.about, .contact{
+  background:#fff;
+  padding:30px;
+  border-radius:8px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+footer{
+  background:#2e7d32;
+  color:#fff;
+  text-align:center;
+  padding:25px;
+  margin-top:50px;
+}
+</style>
+
+<script>
+function scrollToSection(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+</script>
+
+</head>
+<body>
+
+<header>
+  <h1 onclick="scrollToSection('home')" style="cursor:pointer;">DelightClothing</h1>
+  <nav>
+    <a onclick="scrollToSection('home')">Home</a>
+    <a onclick="scrollToSection('shop')">Shop</a>
+    <a onclick="scrollToSection('about')">About</a>
+    <a onclick="scrollToSection('contact')">Contact</a>
+  </nav>
+</header>
+
+<div class="container">
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <h2>Fashion That Matches Your Lifestyle</h2>
+  <p>Discover trendy, comfortable, and affordable fashion at DelightClothing. From everyday wear to statement pieces, we bring style and sustainability together.</p>
+  <button class="btn" onclick="scrollToSection('shop')">Shop Now</button>
+</section>
+
+<!-- SHOP -->
+<section id="shop">
+  <h2>Featured Collection</h2>
+  <div class="products">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1520975661595-6453be3f7070?auto=format&fit=crop&w=600&q=80">
+      <h3>Casual Summer Dress</h3>
+      <p class="price">$49.99</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80">
+      <h3>Classic Denim Jacket</h3>
+      <p class="price">$79.99</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80">
+      <h3>Elegant Handbag</h3>
+      <p class="price">$59.99</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1520975867597-0a1b4d1e43e9?auto=format&fit=crop&w=600&q=80">
+      <h3>Men’s Casual Shirt</h3>
+      <p class="price">$39.99</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <h2>About DelightClothing</h2>
+  <p>DelightClothing was created with a simple vision: make modern fashion accessible, comfortable, and sustainable. We believe clothing is more than just fabric — it's confidence, personality, and self-expression. Our collections are carefully curated to match current trends while ensuring comfort and durability.</p>
+  <p>We work with responsible suppliers and focus on quality materials that feel good and last long. Whether you’re dressing for a casual day out, work, or a special event, DelightClothing helps you look your best without compromising comfort.</p>
+  <p>Our goal is to create a community around fashion where style meets responsibility. Thank you for being part of our journey.</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>Get in Touch</h2>
+  <p>Have questions about your order or need style advice? Our support team is here to help.</p>
+  <p>Email: support@delightclothing.com</p>
+  <p>Phone: +1 (800) 123-4567</p>
+  <p>Customer support is available Monday to Friday, 9am – 6pm.</p>
+</section>
+
+</div>
+
+<footer>
+  © 2026 DelightClothing – Fashion for Everyone
+</footer>
+
+</body>
+</html>
